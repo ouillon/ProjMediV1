@@ -1,0 +1,49 @@
+{% extends "/templates/main.html.twig" %}
+{%block contenu %}
+    <div class="container">
+        <h3> PROJET MEDICAMENT </h3>
+        <div class="col-xs-12 col-sm-7"> 
+            <!-- Partie gauche --> 
+            <div class="rubrique"> 
+                <form class="form-signin">
+                    <h2 class="form-signin-heading">Se connecter</h2>
+                    <label for="inputEmail" class="sr-only">Adresse mail</label>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Adresse mail" required autofocus>
+                    <label for="inputPassword" class="sr-only">mot de passe</label>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="remember-me"> Se souvenir de moi
+                        </label>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-5"> 
+            <!-- Partie droite --> 
+            <div class="rubrique"> 
+                <form class="form-signin">
+                    <h2 class="form-signin-heading">Inscription</h2>
+                    <label for="inputEmail" class="sr-only">Adresse mail</label>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Adresse mail" required autofocus>
+                    <label for="inputPassword" class="sr-only">mot de passe</label>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+                    <label for="inputPassword" class="sr-only">Confirmer mot de passe</label>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Confirmer Mot de passe" required>
+                    <label for="inputNom" class="sr-only">Nom</label>
+                    <input type="text" id="inputNom" class="form-control" placeholder="Votre Nom" required>
+                    <label for="inputPrenom" class="sr-only">Prénom</label>
+                    <input type="text" id="inputPrenom" class="form-control" placeholder="Votre Prénom" required>
+                    <label for="inputPrenom" class="sr-only">Téléphone mobile</label>
+                    <input type="text" id="inputTel" class="form-control" placeholder="Téléphone mobile" required>
+                    <p></p>             
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Création compte</button>
+                    <p>{{mess}}<p>
+                </form>  
+            </div>
+        </div>
+    </div><!-- /container -->
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{
+    "name": "vendor/phpdemo",
+    "description": "Description of project phpdemo.",
+    "authors": [
+        {
+            "name": "pascale",
+            "email": "your@email.here"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "twig/twig": "dev-master"
+    }
+}

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT root (servers)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT servers (serveur)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT serveur (chaines|user|chaine)*>
+<!ATTLIST serveur
+    id ID #REQUIRED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT chaines (chaine)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT chaine (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT user (login|pwd)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT login (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT pwd (#PCDATA)>
+

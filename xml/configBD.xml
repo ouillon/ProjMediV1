@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root SYSTEM "configBD.dtd">
+<root>
+    <servers>
+        <serveur id='principal'>
+            <chaines>
+               <chaine> (DESCRIPTION =(ADDRESS_LIST =(ADDRESS = (PROTOCOL = TCP)(HOST = srv-oracle)(PORT = 1521)) )(CONNECT_DATA = (SERVICE_NAME = xe))) </chaine>
+               <!--  La chaine suivante est pour l'exemple ... ne pas en tenir compte ! -->
+               <chaine> (DESCRIPTION =(ADDRESS_LIST =(ADDRESS = (PROTOCOL = TCP)(HOST = 10.10.2.10)(PORT = 1521)) )(CONNECT_DATA = (SERVICE_NAME = slam))) </chaine>                
+            </chaines>
+            <user>
+                <login>roche</login>
+                <pwd>gvmt</pwd>
+            </user>
+        </serveur>
+        <serveur id='secondaire'>    
+            <chaine> (DESCRIPTION =(ADDRESS_LIST =(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) )(CONNECT_DATA = (SERVICE_NAME = xe))) </chaine>        
+            <user>
+                <login>demo</login>
+                <pwd>demo</pwd>
+            </user>
+        </serveur>         
+    </servers>
+ </root>
