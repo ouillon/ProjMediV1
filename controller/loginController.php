@@ -20,8 +20,8 @@ function frmConnect() {
 function verifLogin() {
     try {
         // on va commencer par récupérer le login et le mdp saisis
-        $login = filter_input(INPUT_POST, 'login', FILTER_SANITIZE_STRING);
-        $pwd = filter_input(INPUT_POST, 'pwd', FILTER_SANITIZE_STRING);
+        $login = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_STRING);
+        $pwd = filter_input(INPUT_POST, 'inputPassword', FILTER_SANITIZE_STRING);
         /* on va ouvrir la connexion
          * Comment ? 
          * On va créer un fichier connect.php dans le dossier core

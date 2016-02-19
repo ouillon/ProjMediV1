@@ -1,15 +1,8 @@
 <?php
 /**
  * Point d'entrée de l'application
- * Ce script sert de point d'entrée à l'application
- * En prmier lieu on définit le la constante RACINE qui représente
- * la racine du site
  */
 define('RACINE', __DIR__);
-/**
- *  on crée une constante alias de la constante DIRECTORY_SEPARATOR
- * qui représente de séparateur de dossiers
- */
 
 define('DS', DIRECTORY_SEPARATOR);
 /**
@@ -27,8 +20,16 @@ include (CONFIG_PATH . 'twigconfig.php');
 // On démarre la session
 session_start();
 
-$controller = 'login';   // controller login
-$action = 'frmConnect'; // la fonction frmConnect du controller login
+if (count($_GET) < 2) {
+// on démarre l'appli et on va impose le controleur et l'action
+    $controller = 'login';   // controller login
+    $action = 'frmConnect'; // la fonction frmConnect du controller login
+} 
+else{
+    // le controlleur et l'action ont été passés dans l'url
+    $controller=filter_input(INPUT_GET,'c',FILTER_SANITIZE_STRING);
+    $action=filter_input(INPUT_GET,'a',FILTER_SANITIZE_STRING);
+}
 
 // on va charger le controlleur correspondant
 include CONTROLLER_PATH.$controller."Controller.php";
